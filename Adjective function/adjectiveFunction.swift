@@ -50,11 +50,11 @@ extension AdjectiveFunction {
     
     internal func iterativeCalculate(leftValue: Int, rightValue: Int) -> Int {
         var result: Int = 0
-        for i in 1...rightValue {
-            result += leftValue
-        }
+        if leftValue != 0, rightValue != 0 {
+            for _ in 1...rightValue {
+                result += leftValue
+            }
+        } else { return 0 }
         return result
     }
 }
-
-
